@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Poppins', sans-serif;
+    }
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    h2 { color: #ff6f91; }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff6f91;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #ff3f6f; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Who loves you the most? 💕</h2>
+    <input type="text" id="answer" placeholder="Type the name...">
+    <button onclick="goToSurprise()">Send</button>
+  </div>
+
+  <script>
+    function goToSurprise() {
+      const name = document.getElementById('answer').value;
+      if(name.trim() !== "") {
+        localStorage.setItem("loverName", name);
+        window.location.href = "surprise.html";
+      } else {
+        alert("Please type a name!");
+      }
+    }
+  </script>
+</body>
+</html>
