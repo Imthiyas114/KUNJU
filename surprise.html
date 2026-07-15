@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 { margin-bottom: 20px; }
+    #typing {
+      font-size: 1.3em;
+      min-height: 120px;
+      margin-bottom: 40px;
+    }
+    .pics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .pics img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .pics img:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <h1>I KNOW  PATHUSEEE... by<span id="lover"></span> ❤️</h1>
+  <div id="typing"></div>
+  <div class="pics">
+    <img src="Screenshot 2026-06-15 201309.png" alt="Favorite Pic 1">
+    <img src="Screenshot 2026-03-29 004424.png" alt="Favorite Pic 2">
+    <img src="image.png" alt="Favorite Pic 3">
+  </div>
+
+  <script>
+    const loverName = localStorage.getItem("loverName") || "You";
+    document.getElementById("lover").textContent = loverName;
+
+    const quotes = [
+  "എനിക്ക് എന്റെ കുഞ്ഞുവിനെ കാണണം.💖",
+  "എനിക്ക് എന്റെ പാത്തുവിനൊപ്പം ജീവിക്കണം.💖",
+  "Forever and always, it’s us 💍",
+  "Every love story is beautiful, but ours is SPECIAL 💕",
+  "Until my very last breath, I will never forget you. I long for your presence not only on this earth, but also in heaven — Insha Allah. 🌹"
+];
+
+
+
+    let i = 0, j = 0;
+    const typingDiv = document.getElementById("typing");
+
+    function typeEffect() {
+      if (i < quotes.length) {
+        if (j < quotes[i].length) {
+          typingDiv.innerHTML += quotes[i][j];
+          j++;
+          setTimeout(typeEffect, 80);
+        } else {
+          typingDiv.innerHTML += "<br><br>";
+          i++;
+          j = 0;
+          setTimeout(typeEffect, 500);
+        }
+      }
+    }
+    typeEffect();
+  </script>
+</body>
+</html>
