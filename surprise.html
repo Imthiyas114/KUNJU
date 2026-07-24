@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For My Love — PATHU 💕</title>
+  <title>For My Love — Fathima 💕</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
     :root {
       --rose:    #e8536a;
       --gold:    #f2c96e;
@@ -15,13 +16,16 @@
       --pink:    #f06292;
       --dark:    #120810;
     }
+
     html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Lato', sans-serif;
       background: var(--dark);
       color: #fff;
       overflow-x: hidden;
     }
+
     /* ─── CANVAS PETALS ─── */
     #petal-canvas {
       position: fixed;
@@ -29,6 +33,7 @@
       pointer-events: none;
       z-index: 0;
     }
+
     /* ─── HERO ─── */
     #hero {
       position: relative;
@@ -40,6 +45,7 @@
       text-align: center;
       overflow: hidden;
     }
+
     #hero-bg {
       position: absolute;
       inset: 0;
@@ -48,20 +54,24 @@
         url('pic1.jpg') center top / cover no-repeat;
       animation: slowZoom 20s ease-in-out infinite alternate;
     }
+
     @keyframes slowZoom {
       from { transform: scale(1); }
       to   { transform: scale(1.08); }
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
       padding: 2rem;
       animation: fadeInUp 1.5s ease forwards;
     }
+
     @keyframes fadeInUp {
       from { opacity:0; transform: translateY(60px); }
       to   { opacity:1; transform: translateY(0); }
     }
+
     .to-label {
       font-family: 'Lato', sans-serif;
       font-weight: 300;
@@ -72,6 +82,7 @@
       margin-bottom: 1rem;
       animation: fadeInUp 1.5s 0.3s ease both;
     }
+
     .hero-name {
       font-family: 'Great Vibes', cursive;
       font-size: clamp(5rem, 18vw, 10rem);
@@ -84,6 +95,7 @@
       filter: drop-shadow(0 0 40px rgba(232,83,106,0.5));
       animation: fadeInUp 1.5s 0.5s ease both;
     }
+
     .hero-tagline {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -92,10 +104,12 @@
       margin-top: 1.2rem;
       animation: fadeInUp 1.5s 0.9s ease both;
     }
+
     .scroll-cta {
       margin-top: 3rem;
       animation: fadeInUp 1.5s 1.3s ease both;
     }
+
     .scroll-cta button {
       background: linear-gradient(135deg, var(--rose), #c0392b);
       border: none;
@@ -111,16 +125,19 @@
       position: relative;
       overflow: hidden;
     }
+
     .scroll-cta button::after {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
     }
+
     .scroll-cta button:hover {
       transform: translateY(-3px) scale(1.04);
       box-shadow: 0 14px 45px rgba(232,83,106,0.65);
     }
+
     /* ─── FLOATING HEARTS ─── */
     .float-hearts {
       position: absolute;
@@ -130,28 +147,33 @@
       pointer-events: none;
       z-index: 1;
     }
+
     .fheart {
       position: absolute;
       font-size: 1.4rem;
       animation: floatHeart linear infinite;
       opacity: 0;
     }
+
     @keyframes floatHeart {
       0%   { opacity:0; transform: translateY(0) scale(0.5) rotate(-10deg); }
       10%  { opacity:0.7; }
       80%  { opacity:0.5; }
       100% { opacity:0; transform: translateY(-110vh) scale(1.2) rotate(20deg); }
     }
+
     /* ─── SECTION COMMON ─── */
     section {
       position: relative;
       z-index: 1;
       padding: 6rem 2rem;
     }
+
     .section-inner {
       max-width: 860px;
       margin: 0 auto;
     }
+
     .section-badge {
       display: inline-block;
       font-family: 'Lato', sans-serif;
@@ -165,18 +187,21 @@
       border-radius: 50px;
       margin-bottom: 1.5rem;
     }
+
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 6vw, 3.5rem);
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
+
     /* ─── LOVE LETTER SECTION ─── */
     #letter {
       background:
         linear-gradient(rgba(18,8,16,0.60) 0%, rgba(18,8,16,0.82) 100%),
         url('pic2.jpg') center center / cover no-repeat fixed;
     }
+
     .letter-card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.1);
@@ -186,6 +211,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .letter-card::before {
       content: '❝';
       position: absolute;
@@ -195,6 +221,7 @@
       font-family: Georgia, serif;
       line-height: 1;
     }
+
     .letter-text {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -202,7 +229,9 @@
       line-height: 2;
       color: rgba(255,255,255,0.9);
     }
+
     .letter-text p + p { margin-top: 1.5rem; }
+
     .letter-signature {
       margin-top: 2.5rem;
       text-align: right;
@@ -213,16 +242,19 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     /* ─── REASONS SECTION ─── */
     #reasons {
       background: linear-gradient(180deg, var(--dark) 0%, #1e0619 50%, var(--dark) 100%);
     }
+
     .reasons-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
       margin-top: 3rem;
     }
+
     .reason-card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(232,83,106,0.2);
@@ -232,35 +264,42 @@
       transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
       cursor: default;
     }
+
     .reason-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 50px rgba(232,83,106,0.25);
       border-color: rgba(232,83,106,0.55);
     }
+
     .reason-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
     .reason-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.15rem;
       color: var(--gold);
       margin-bottom: 0.5rem;
     }
+
     .reason-desc {
       font-size: 0.9rem;
       color: rgba(255,255,255,0.65);
       line-height: 1.7;
     }
+
     /* ─── GALLERY / MOMENTS ─── */
     #moments {
       background:
         linear-gradient(rgba(18,8,16,0.65), rgba(18,8,16,0.75)),
         url('pic3.jpg') center center / cover no-repeat fixed;
     }
+
     .moments-wrap {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       margin-top: 3rem;
     }
+
     .moment-tile {
       border-radius: 22px;
       overflow: hidden;
@@ -273,10 +312,12 @@
       cursor: default;
       box-shadow: 0 12px 40px rgba(0,0,0,.5);
     }
+
     .moment-tile:hover {
       transform: scale(1.03) translateY(-6px);
       box-shadow: 0 28px 65px rgba(232,83,106,0.35);
     }
+
     .moment-tile .tile-photo {
       position: absolute;
       inset: 0;
@@ -284,18 +325,23 @@
       background-position: center top;
       transition: transform 0.5s;
     }
+
     .moment-tile:hover .tile-photo { transform: scale(1.06); }
+
     .moment-tile .tile-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(to top, rgba(18,8,16,0.90) 0%, rgba(18,8,16,0.25) 55%, transparent 100%);
     }
+
     .moment-tile .tile-content {
       position: relative;
       z-index: 1;
       padding: 1.8rem;
     }
+
     .moment-tile .tile-icon { font-size: 2rem; margin-bottom: 0.6rem; display: block; }
+
     .moment-tile .tile-label {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -303,11 +349,13 @@
       color: rgba(255,255,255,0.88);
       line-height: 1.65;
     }
+
     /* ─── COUNTDOWN / PROMISE ─── */
     #promise {
       text-align: center;
       background: linear-gradient(180deg, var(--dark) 0%, #1a0519 100%);
     }
+
     .promise-ring {
       width: 200px;
       height: 200px;
@@ -318,9 +366,11 @@
       animation: rotateSlow 6s linear infinite;
       position: relative;
     }
+
     @keyframes rotateSlow {
       to { transform: rotate(360deg); }
     }
+
     .promise-ring-inner {
       width: 100%;
       height: 100%;
@@ -333,10 +383,12 @@
       position: relative;
       z-index: 1;
     }
+
     .promise-ring-inner span {
       font-size: 3.5rem;
       animation: heartbeat 1.4s ease-in-out infinite;
     }
+
     @keyframes heartbeat {
       0%,100% { transform: scale(1); }
       14%     { transform: scale(1.25); }
@@ -344,6 +396,7 @@
       42%     { transform: scale(1.15); }
       70%     { transform: scale(1); }
     }
+
     .promise-text {
       max-width: 600px;
       margin: 0 auto;
@@ -353,11 +406,14 @@
       line-height: 1.9;
       color: rgba(255,255,255,0.85);
     }
+
     /* ─── TIMELINE ─── */
     #timeline {
       background: linear-gradient(180deg, #1a0519 0%, var(--dark) 100%);
     }
+
     .timeline-list { position:relative; margin-top:3rem; }
+
     .timeline-list::before {
       content:'';
       position:absolute;
@@ -367,6 +423,7 @@
       transform: translateX(-50%);
       background: linear-gradient(to bottom, transparent, var(--rose), var(--gold), var(--rose), transparent);
     }
+
     .tl-item {
       display: flex;
       align-items: flex-start;
@@ -374,8 +431,10 @@
       margin-bottom: 3rem;
       position: relative;
     }
+
     .tl-item:nth-child(odd) { flex-direction: row; }
     .tl-item:nth-child(even) { flex-direction: row-reverse; }
+
     .tl-card {
       width: calc(50% - 2rem);
       background: rgba(255,255,255,0.04);
@@ -385,10 +444,12 @@
       backdrop-filter: blur(10px);
       transition: transform 0.35s, box-shadow 0.35s;
     }
+
     .tl-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 40px rgba(232,83,106,0.2);
     }
+
     .tl-dot {
       position: absolute;
       left: 50%;
@@ -400,18 +461,22 @@
       box-shadow: 0 0 12px rgba(232,83,106,0.7);
       top: 1.2rem;
     }
+
     .tl-emoji { font-size: 1.8rem; margin-bottom: 0.6rem; }
+
     .tl-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
       color: var(--gold);
       margin-bottom: 0.4rem;
     }
+
     .tl-body {
       font-size: 0.88rem;
       color: rgba(255,255,255,0.65);
       line-height: 1.7;
     }
+
     /* ─── FINAL SECTION ─── */
     #final {
       min-height: 60vh;
@@ -424,6 +489,7 @@
         radial-gradient(ellipse at center, #3d0a22 0%, var(--dark) 70%);
       padding: 6rem 2rem;
     }
+
     .final-name {
       font-family: 'Great Vibes', cursive;
       font-size: clamp(4rem, 14vw, 8rem);
@@ -434,10 +500,12 @@
       filter: drop-shadow(0 0 30px rgba(232,83,106,0.6));
       animation: pulse 3s ease-in-out infinite;
     }
+
     @keyframes pulse {
       0%,100% { filter: drop-shadow(0 0 30px rgba(232,83,106,0.6)); }
       50%      { filter: drop-shadow(0 0 55px rgba(232,83,106,0.9)); }
     }
+
     .final-msg {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -447,6 +515,7 @@
       margin: 1.5rem auto 0;
       line-height: 1.8;
     }
+
     .final-hearts {
       margin-top: 2rem;
       font-size: 2.5rem;
@@ -454,11 +523,13 @@
       gap: 1rem;
       justify-content: center;
     }
+
     .final-hearts span {
       animation: heartbeat 1.4s ease-in-out infinite;
     }
     .final-hearts span:nth-child(2) { animation-delay: 0.2s; }
     .final-hearts span:nth-child(3) { animation-delay: 0.4s; }
+
     /* ─── MUSIC NOTE FLOATERS ─── */
     .music-note {
       position: fixed;
@@ -468,12 +539,14 @@
       z-index: 0;
       animation: floatNote 8s linear infinite;
     }
+
     @keyframes floatNote {
       0%   { opacity:0; transform: translate(0,0) rotate(0deg); }
       15%  { opacity:0.5; }
       85%  { opacity:0.3; }
       100% { opacity:0; transform: translate(80px,-100vh) rotate(45deg); }
     }
+
     /* ─── STARFIELD ─── */
     .star {
       position: fixed;
@@ -483,10 +556,12 @@
       z-index: 0;
       animation: twinkle linear infinite;
     }
+
     @keyframes twinkle {
       0%,100% { opacity:0.1; transform: scale(1); }
       50%      { opacity:0.8; transform: scale(1.6); }
     }
+
     /* ─── SCROLL REVEAL ─── */
     .reveal {
       opacity: 0;
@@ -497,6 +572,7 @@
       opacity: 1;
       transform: translateY(0);
     }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 640px) {
       .timeline-list::before { left: 1rem; }
@@ -508,14 +584,19 @@
   </style>
 </head>
 <body>
+
 <!-- Stars -->
 <div id="stars"></div>
+
 <!-- Petal canvas -->
 <canvas id="petal-canvas"></canvas>
+
 <!-- ─── HERO ─── -->
 <section id="hero">
   <div id="hero-bg"></div>
+
   <div class="float-hearts" id="float-hearts"></div>
+
   <div class="hero-content">
     <p class="to-label">✦ A surprise just for you ✦</p>
     <h1 class="hero-name">Fathima</h1>
@@ -527,13 +608,14 @@
     </div>
   </div>
 </section>
+
 <!-- ─── LOVE LETTER ─── -->
 <section id="letter">
   <div class="section-inner">
     <div class="reveal">
       <span class="section-badge">✦ A letter from my heart ✦</span>
       <h2 class="section-title" style="background:linear-gradient(135deg,#fff,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
-        My Dearest KUNJUSEE,
+        My Dearest Fathima,
       </h2>
     </div>
     <div class="letter-card reveal">
@@ -562,6 +644,7 @@
     </div>
   </div>
 </section>
+
 <!-- ─── REASONS ─── -->
 <section id="reasons">
   <div class="section-inner">
@@ -605,6 +688,7 @@
     </div>
   </div>
 </section>
+
 <!-- ─── MOMENTS ─── -->
 <section id="moments">
   <div class="section-inner">
@@ -642,6 +726,7 @@
     </div>
   </div>
 </section>
+
 <!-- ─── PROMISE ─── -->
 <section id="promise">
   <div class="section-inner">
@@ -665,6 +750,7 @@
     </p>
   </div>
 </section>
+
 <!-- ─── TIMELINE ─── -->
 <section id="timeline">
   <div class="section-inner">
@@ -674,6 +760,7 @@
         Written in Stars
       </h2>
     </div>
+
     <div class="timeline-list">
       <div class="tl-item reveal">
         <div class="tl-card">
@@ -684,6 +771,7 @@
         <div class="tl-dot"></div>
         <div style="width:calc(50% - 2rem);"></div>
       </div>
+
       <div class="tl-item reveal">
         <div style="width:calc(50% - 2rem);"></div>
         <div class="tl-dot"></div>
@@ -693,6 +781,7 @@
           <div class="tl-body">Every conversation revealed a new side of you — and each one made me more certain that you are extraordinary.</div>
         </div>
       </div>
+
       <div class="tl-item reveal">
         <div class="tl-card">
           <div class="tl-emoji">💕</div>
@@ -702,6 +791,7 @@
         <div class="tl-dot"></div>
         <div style="width:calc(50% - 2rem);"></div>
       </div>
+
       <div class="tl-item reveal">
         <div style="width:calc(50% - 2rem);"></div>
         <div class="tl-dot"></div>
@@ -711,6 +801,7 @@
           <div class="tl-body">Today, I want you to know that choosing you — every single day — is the greatest joy of my life.</div>
         </div>
       </div>
+
       <div class="tl-item reveal">
         <div class="tl-card">
           <div class="tl-emoji">♾️</div>
@@ -723,12 +814,13 @@
     </div>
   </div>
 </section>
+
 <!-- ─── FINAL ─── -->
 <section id="final">
   <p class="reveal" style="font-family:'Lato',sans-serif;font-weight:300;letter-spacing:0.4em;text-transform:uppercase;font-size:0.8rem;color:var(--gold);margin-bottom:1rem;">
     ✦ Always &amp; Forever ✦
   </p>
-  <div class="final-name reveal">Fathima</div>
+  <div class="final-name reveal">PATHU</div>
   <p class="final-msg reveal">
     You are the most beautiful person in my world — inside and out.
     Thank you for existing. Thank you for being you.
@@ -740,6 +832,7 @@
     <span>🌹</span>
   </div>
 </section>
+
 <script>
   /* ─── STARFIELD ─── */
   (function(){
@@ -757,6 +850,7 @@
       container.appendChild(s);
     }
   })();
+
   /* ─── FLOATING HEARTS ─── */
   (function(){
     const c = document.getElementById('float-hearts');
@@ -776,6 +870,7 @@
       c.appendChild(h);
     }
   })();
+
   /* ─── FALLING PETALS (canvas) ─── */
   (function(){
     const canvas=document.getElementById('petal-canvas');
@@ -783,7 +878,9 @@
     let W=canvas.width=window.innerWidth;
     let H=canvas.height=window.innerHeight;
     window.addEventListener('resize',()=>{W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;});
+
     const colors=['#e8536a','#f06292','#f2c96e','#fde8ec','#ff80ab','#ff4081'];
+
     class Petal{
       constructor(){this.reset(true);}
       reset(init){
@@ -815,7 +912,9 @@
         ctx.restore();
       }
     }
+
     const petals=Array.from({length:70},()=>new Petal());
+
     function loop(){
       ctx.clearRect(0,0,W,H);
       petals.forEach(p=>{p.update();p.draw();});
@@ -823,6 +922,7 @@
     }
     loop();
   })();
+
   /* ─── MUSIC NOTES ─── */
   (function(){
     const notes=['♩','♪','♫','♬'];
@@ -841,6 +941,7 @@
       document.body.appendChild(n);
     }
   })();
+
   /* ─── SCROLL REVEAL ─── */
   (function(){
     const els=document.querySelectorAll('.reveal');
